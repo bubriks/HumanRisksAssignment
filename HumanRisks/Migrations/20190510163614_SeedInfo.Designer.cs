@@ -9,8 +9,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace HumanRisks.Migrations
 {
     [DbContext(typeof(DatabaseContext))]
-    [Migration("20190510145128_secondMigration")]
-    partial class secondMigration
+    [Migration("20190510163614_SeedInfo")]
+    partial class SeedInfo
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

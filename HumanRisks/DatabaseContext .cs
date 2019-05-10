@@ -22,14 +22,17 @@ namespace HumanRisks
         /// <param name="modelBuilder"></param>
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<RiskAssessment>().HasData(new RiskAssessment{Id = "1", Title = "Test", Latitude = 0.1, Longitude = 0.2});
-            modelBuilder.Entity<Threat>().HasData(new Threat {Id = "1", Title = "T1", Level = 1, RiskAssessmentId = "1"});
-            modelBuilder.Entity<Threat>().HasData(new Threat {Id = "2", Title = "T2", Level = 0, RiskAssessmentId = "1"});
+            modelBuilder.Entity<RiskAssessment>().HasData(
+                new RiskAssessment {Id = "1", Title = "Test", Latitude = 0.1, Longitude = 0.2},
+                new RiskAssessment {Id = "2", Title = "XPPR", Latitude = 3, Longitude = 77.5},
+                new RiskAssessment {Id = "3", Title = "GP", Latitude = 4.31, Longitude = 4.2}
+            );
 
-            modelBuilder.Entity<RiskAssessment>().HasData(new RiskAssessment{Id = "2", Title = "XPPR", Latitude = 3, Longitude = 77.5});
-            modelBuilder.Entity<Threat>().HasData(new Threat {Id = "3", Title = "T3", Level = 2, RiskAssessmentId = "2"});
-            
-            modelBuilder.Entity<RiskAssessment>().HasData(new RiskAssessment{Id = "3", Title = "GP", Latitude = 4.31, Longitude = 4.2});
+            modelBuilder.Entity<Threat>().HasData(
+                new Threat {Id = "1", Title = "T1", Level = 1, RiskAssessmentId = "1"},
+                new Threat {Id = "2", Title = "T2", Level = 0, RiskAssessmentId = "1"},
+                new Threat {Id = "3", Title = "T3", Level = 2, RiskAssessmentId = "2"}
+            );
         }
     }
 }

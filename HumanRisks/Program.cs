@@ -10,6 +10,8 @@ namespace HumanRisks
         private static RiskAssessmentDA riskAssessmentDa;
         private static ThreatsDA threatsDa;
         
+        //text color
+
         static void Main(string[] args)
         {
             /*
@@ -216,12 +218,15 @@ namespace HumanRisks
         {
             if (success)
             {
+                Console.BackgroundColor = ConsoleColor.Green; 
                 Console.WriteLine("\nAction performed");
             }
             else
             {
+                Console.BackgroundColor = ConsoleColor.Red; 
                 Console.WriteLine("\nAction failed");
             }
+            Console.BackgroundColor = ConsoleColor.Black; 
             Console.WriteLine("Press any key to continue");
             Console.ReadKey();
             Console.Clear();

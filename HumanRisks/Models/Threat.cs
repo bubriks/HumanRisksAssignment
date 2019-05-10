@@ -11,6 +11,7 @@ namespace HumanRisks.Models
     public class Threat
     {
         [Key]
+        [Required]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public string Id { get; set; }
 

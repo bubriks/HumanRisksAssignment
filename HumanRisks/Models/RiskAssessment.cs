@@ -12,6 +12,7 @@ namespace HumanRisks.Models
     public class RiskAssessment
     {
         [Key]
+        [Required]
         public string Id { get; set; }
 
         [Required]
