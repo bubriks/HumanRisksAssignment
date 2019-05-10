@@ -9,8 +9,6 @@ namespace HumanRisks
     {
         private static RiskAssessmentDA riskAssessmentDa;
         private static ThreatsDA threatsDa;
-        
-        //text color
 
         static void Main(string[] args)
         {
